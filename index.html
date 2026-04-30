@@ -6,94 +6,105 @@
     <title>مطعم الحاج حميده الشرقاوي</title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* الألوان الأساسية */
-        :root {
-            --primary: #d35400; /* لون برتقالي دافئ للمطاعم */
-            --bg: #1a1a1a; /* خلفية داكنة */
-            --text: #ffffff;
-        }
+    :root {
+        --primary: #c0392b; /* أحمر غامق "شهي" */
+        --accent: #d35400; /* برتقالي محروق */
+        --bg: #fdfaf5;    /* خلفية كريمي فاتحة ومريحة */
+        --card-bg: #ffffff;
+        --text: #2c3e50;
+    }
 
-        body {
-            margin: 0; 
-            padding: 20px;
-            font-family: 'Tajawal', sans-serif;
-            background-color: var(--bg); 
-            color: var(--text);
-            display: flex; 
-            flex-direction: column; 
-            align-items: center;
-        }
+    body {
+        margin: 0;
+        padding: 20px;
+        font-family: 'Tajawal', sans-serif;
+        background-color: var(--bg);
+        /* إضافة نقوش خفيفة جداً في الخلفية تعطي طابع مطاعم */
+        background-image: url('https://www.transparenttextures.com/patterns/pinstripe.png');
+        color: var(--text);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-        .container { 
-            width: 100%; 
-            max-width: 450px; 
-            text-align: center; 
-        }
+    .container {
+        width: 100%;
+        max-width: 450px;
+        text-align: center;
+        background: var(--card-bg);
+        padding: 30px 20px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* ظل خفيف جداً */
+    }
 
-        .logo { 
-            width: 130px; 
-            height: 130px; 
-            border-radius: 50%; 
-            border: 3px solid var(--primary); 
-            margin-bottom: 10px; 
-            object-fit: cover;
-        }
+    .logo {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 4px solid var(--bg);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        margin-bottom: 15px;
+    }
 
-        h1 { margin-bottom: 5px; font-size: 1.8rem; }
-        .subtitle { color: #aaaaaa; margin-bottom: 30px; font-size: 1rem; }
-        
-        /* تصميم الزراير */
-        .btn {
-            display: block; 
-            width: 100%; 
-            padding: 15px; 
-            margin-bottom: 12px;
-            background-color: var(--primary); 
-            color: white;
-            text-decoration: none; 
-            border-radius: 12px; 
-            font-weight: bold; font-size: 1.1rem;
-            box-sizing: border-box; 
-            transition: all 0.3s ease;
-        }
+    h1 { margin-bottom: 5px; color: var(--primary); font-size: 1.6rem; }
 
-        .btn:hover { background-color: #e67e22; transform: translateY(-2px); }
-        
-        /* تصميم مختلف لزر الخريطة */
-        .btn-outline { 
-            background-color: transparent; 
-            border: 2px solid var(--primary); 
+    
+     .subtitle { 
             color: var(--primary); 
-        }
-        .btn-outline:hover { background-color: var(--primary); color: white; }
-        
-        /* تصميم خاص للواتساب */
-        .btn-whatsapp { background-color: #25D366; color: white; }
-        .btn-whatsapp:hover { background-color: #20b858; }
-        
-        /* عناوين الأقسام */
-        .section-title { 
-            text-align: right; 
             font-size: 1.1rem; 
-            margin-top: 25px; 
-            margin-bottom: 15px; 
-            border-bottom: 1px solid #333; 
-            padding-bottom: 5px; 
-            color: #ccc;
+            font-weight: 700;
+            margin-bottom: 30px; 
+            background-color: #fceceb; /* خلفية حمراء فاتحة جداً */
+            padding: 6px 18px;
+            border-radius: 20px;
+            display: inline-block;
+            border: 1px solid #fadbd8;
         }
-        
-        /* شبكة لأرقام الاتصال عشان ماتاخدش مساحة كبيرة */
-        .grid-2 { 
-            display: grid; 
-            grid-template-columns: 1fr 1fr; 
-            gap: 10px; 
-        }
-    </style>
+
+    .btn {
+        display: block;
+        width: 100%;
+        padding: 16px;
+        margin-bottom: 12px;
+        background-color: var(--accent);
+        color: white;
+        text-decoration: none;
+        border-radius: 15px;
+        font-weight: bold;
+        transition: 0.3s;
+        box-sizing: border-box;
+    }
+
+    .btn:hover { background-color: var(--primary); transform: scale(1.02); }
+
+    .btn-outline {
+        background-color: transparent;
+        border: 2px solid var(--accent);
+        color: var(--accent);
+    }
+
+    .btn-whatsapp { background-color: #27ae60; }
+
+    .section-title {
+        text-align: right;
+        font-size: 1rem;
+        margin-top: 25px;
+        margin-bottom: 12px;
+        color: #95a5a6;
+        font-weight: bold;
+    }
+
+    .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+</style>
 </head>
 <body>
     <div class="container">
 <img src="logo.jpg" alt="لوجو الحاج حميده الشرقاوي" class="logo">        <h1>الحاج حميده الشرقاوي</h1>
-        <p class="subtitle">أصل الطعم الأصيل</p>
+        <p class="subtitle">طعم مفيش فيه غلطه...</p>
 
         <a href="https://drive.google.com/file/d/18FsNDNgY54nryjxtLt77P-wDXUHkX_vi/view?usp=drive_link" class="btn">🍽️ عرض المنيو</a>
         <a href="https://www.facebook.com/share/1HmdedrVAT/" class="btn" target="_blank">📱 صفحتنا على فيسبوك</a>
